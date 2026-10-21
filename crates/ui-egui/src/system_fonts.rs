@@ -423,7 +423,7 @@ mod tests {
         for need in [Need::Other, Need::Hans, Need::Hant, Need::Korean] {
             let list = candidates(need);
             assert!(!list.is_empty(), "{need:?}");
-            assert!(list.iter().all(|p| p.extension().is_some_and(|e| e == "ttf" || e == "ttc")), "{need:?}");
+            assert!(list.iter().all(|p| p.extension().is_some_and(|e| e == "ttf" || e == "ttc" || e == "otf")), "{need:?}");
         }
     }
 
